@@ -1,12 +1,7 @@
-import pytest
 import shutil
 import sqlite3
 import random
 
-
-# @pytest.fixture(scope='session')
-# def copy_table():
-#     shutil.copyfile('mydatabase.db', 'mydatabase1.db')
 
 class CopyChange:
     def __init__(self):
@@ -110,9 +105,3 @@ class CopyChange:
             self.sql.execute(sql_request)
             self.db.commit()
             self.ships[ship][change_column] = value
-
-# change = CopyChange()
-# change.change_ship()
-# change.change_weapon()
-# change.change_engine()
-# change.change_hull()

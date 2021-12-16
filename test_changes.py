@@ -3,46 +3,6 @@ from copy_change import *
 import pytest
 
 
-# class TestCopyChange:
-#     def __init__(self):
-#         self.mainDB = FillTable()
-#         self.copyDB = CopyChange()
-#
-#         self.engines = self.mainDB.engines
-#         self.weapons = self.mainDB.weapons
-#         self.hulls = self.mainDB.hulls
-#         self.ships = self.mainDB.ships
-#
-#         self._engines = self.copyDB.engines
-#         self._weapons = self.copyDB.weapons
-#         self._hulls = self.copyDB.hulls
-#         self._ships = self.copyDB.ships
-#         # print(self.engines)
-#         # print(self._engines)
-#         # print(self.weapons)
-#         # print(self._weapons)
-#         # print(self.hulls)
-#         # print(self._hulls)
-#         print(self.ships)
-#         print(self._ships)
-#
-#     def test_change_in_ship(self):
-#         for ship in self.ships:
-#             weapon1 = self.ships[ship]["weapon"]
-#             weapon2 = self._ships[ship]["weapon"]
-#             if weapon1 != weapon2:
-#                 assert f'{ship}, {weapon2}\n\tExpected weapon {weapon1}, was {weapon2}'
-#
-#     def test_change_engine(self):
-#         pass
-#
-#     def test_change_hull(self):
-#         pass
-#
-#     def test_change_weapon(self):
-#         pass
-
-
 def get_tables():
     global engines
     global hulls
@@ -101,21 +61,6 @@ def get_tables():
 engines, hulls, weapons, ships = {}, {}, {}, {}
 _engines, _hulls, _weapons, _ships = {}, {}, {}, {}
 get_tables()
-
-
-# print("------", engines, _engines, hulls, _hulls, weapons, _weapons, ships, _ships, "------", sep='\n')
-
-# def check_ship_weapon(weapon1, weapon2):
-#     yield weapon1 == weapon2
-#     # assert weapon1 != weapon2
-#
-#
-# def test_ship_weapon():
-#     for ship in ships:
-#         weapon1 = ships[ship]["weapon"]
-#         weapon2 = _ships[ship]["weapon"]
-#         # yield weapon1 == weapon2
-#         check_ship_weapon(weapon1, weapon2)
 
 
 @pytest.mark.parametrize('ship', ships)

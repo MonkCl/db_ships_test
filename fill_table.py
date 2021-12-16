@@ -2,6 +2,7 @@ import sqlite3
 import random
 from create_table import CreateDB
 
+
 class FillTable:
     def __init__(self):
         CreateDB()
@@ -97,7 +98,3 @@ class FillTable:
         self.random_hulls()
         self.random_weapons()
         self.random_ships()
-
-
-# random_values = FillTable()
-# print(random_values.ships)

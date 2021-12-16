@@ -45,6 +45,3 @@ class CreateDB:
                             FOREIGN KEY (hull) REFERENCES hulls(hull),
                             FOREIGN KEY (engine) REFERENCES engines(engine)
                         )""")
-
-
-
